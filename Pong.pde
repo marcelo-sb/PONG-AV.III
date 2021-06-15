@@ -45,11 +45,11 @@ void setup(){
     rect(650, ypos2, 30, 100);
     
     
-    if(myval == 20 || myval == 20){
+    if(myval == 20 || myval2 == 20){
       exit();
     }
     
-    if(myval == 30 || myval == 30){
+    if(myval == 30 || myval2 == 30){
       ballx = 350;
       bally = 350;
       right = true;
