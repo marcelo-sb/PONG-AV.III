@@ -29,6 +29,14 @@
 \maketitle
 % -----------------------------------------------------------------------------------------------------    
 \begin{abstract} 
+    \textbf{O desafio do desenvolvimento do PONG teve como objetivo principal a integração entre hardware e software 
+    na contrução de um jogo cujo funcionamento ocorresse de maneira correta e respeitando essa comunicação. As três fases que 
+    definiram o escopo dessa prototipagem foram a contrução do circuito físico, conexão entre a IDE do arduino e o Processing, e a 
+    fase final de codificação, resultando em um produto que é controlado de modo físicamente entre dois jogadores e é praticado 
+    através de uma interface gráfica bem construida. Por fim, concluiu-se que a maior dificuldade ocorreu na codificação de uma nova
+    ferramenta e, com isso, necessitando de conhecimento na forma de realizar o versionamento dos respectivos códigos. 
+    \\
+    Palavras-chave: PONG; Processing; arduino; hardware; software}
 \end{abstract}
 % -----------------------------------------------------------------------------------------------------
 \section{Introdução}
@@ -53,14 +61,69 @@
     interligar-se ao hospedeiro, que é usado para programá-la e interagi-la em tempo real.
 % -----------------------------------------------------------------------------------------------------
 \section{Desenvolvimento}
+    O PONG traz como ideia central o mesmo mecanismo de um \textit{Aero Hockey} ou 
+    Hockey de mesa, onde existem duas hastes de lados opostos as quais se referem a cada jogador e o objetivo é que cada 
+    jogador rebata a bola de modo a evitar que a bola escape e acabe batendo na parede ao invés de na haste. Cada vez que a bola
+    bater na parede do adversário (não sendo rebatida por ele), o mesmo pontua. 
+    \\
+    Para o sucesso e desenvolvimento do desafio, foi necessário utilizar de alguns elementos que conseguissem compôr 
+    o objetivo final: um jogo funcional e com uma interface definida. Para isso os elementos utilizados foram:
+    \begin{itemize}
+        \item Arduino UNO [x1]
+        \item \textit{Protoboard} [x1]
+        \item Potenciômetros - 10K$\Omega$ [x2]
+        \item Botões \textit{Push-buttons} [x2]
+        \item Resistores - 10K$\Omega$ [x2]
+        \item \textit{Software Processing (sketchbook)}
+    \end{itemize}
+    Após adquirir os elementos citados, que são requisitos indispensáveis para o sucesso na prototipagem do \textit{game}, foi o 
+    momento de estruturar as etapas de construção do jogo. A realização do desafio se baseou em 3 etapas principais: Montagem do 
+    circuito físico (Componentes físicos), Integração com o \textit{Processing} e Codificação.
+    \\
+    A primeira fase foi a de construção física do circuito eletrônico que iria funcionar com o \textit{Hardware}, ou seja,
+    a parte onde os jogadores realizam o controle do jogo, fisicamente. Para isso foi necessário utilizar os componentes físicos listados, lembrando que
+    essa conexão fisica se dá no arduino e o \textit{Protoboard} é um meio de unir os equipamentos e as entradas (Diditais ou Analógicas) do mesmo.
+    Os dois potênciometros funcionam como "controle" de cada jogador, é com ele que os adversários controlam a posição de suas hastes para 
+    rebater a bola. O potênciometro possui três terminais e, por isso, sua ligação no arduino foi realizada com um terminal ligado
+    ao terra (GND), outro terminal ligado à fase (+5V) e o terceiro terminal ligado à uma entrada analógica. Os \textit{Push-buttons}
+    são os botões de ligar e reiniciar o PONG, com isso a ligação desse componente se dá através, também, de três terminais, onde um será conectado à fase 
+    (+5V), o segundo terminal é ligado na entrada analógica do arduino, e o terceiro terminal é ligado através de um resisitor de 10K$\Omega$ até o terra (GND).
+    Após todos os componentes instalados, foi o momento de alimentar a placa do arduino com uma fonte de 5V, bem como conectar a IDE do mesmo no \textit{Processing}.
+    O resultado da montagem do circuíto se apresenta vide figura 1, abaixo.
+        \begin{figure}[h]
+            \caption{Placa do Arduino conectada}
+            \centering
+            \includegraphics*[width=7cm]{Imagens/Arduino.jpg}
+        \end{figure}
+    Na fase dois foi realizada a integração entre o circuito montado e conectado ao arduino e o \textit{software Processing}, através de sua IDE para tranferir as 
+    informações necessárias que o \textit{sketchbook} utilza para fazer a modelagem e a integração da parte fisíca à interface gráfica que será criada a partir disso.
 
-\begin{figure}[h]
-    \caption{Placa do Arduino conectada}
-    \centering
-    \includegraphics*[width=7cm]{Imagens/Arduino.jpg}
-\end{figure}
+      %  \begin{figure}
+       %     \caption{IDE + \textit{Processing}}
+        %    \centering
+         %   \includegraphics*[width=5cm]{Imagens/IDE+PROCESSING.png}
+        %\end{figure}
+    
+    A fase três, que foi a etapa final de desenvolvimento, foi a etapa mais importante e mais complexa, uma vez que ela diz respeito à parte do "cérebro" do protótipo.
+    Isso quer dizer que o funcionamento correto do jogo depende diretamente de uma codificação que faça o \textit{hardware} e o \textit{software} se comunicarem corretamente, 
+    evitando problemas no decorrer da utilização (jogo). A parte de maior dificuldade por parte do código foi o de definição e funcionamento das angulações que a bola iria 
+    se configurar para ser rebatida e ter esse retorno para o outro lado. Ou seja, a etapa de rebatimento da bola e sua angulação coerente e correta para nova direção da bola. 
 
-% -----------------------------------------------------------------------------------------------------   
+    
+      %  \begin{figure}[h]
+      %      \caption{Interface do PONG - \textit{Processing}}
+      %      \centering
+      %      \includegraphics*[width=5cm]{Imagens/PONG.png}
+      %  \end{figure}
+    
+% ----------------------------------------------------------------------------------------------------   
 \section{Conclusão}
+Diante do processo de contrução e realização do PONG, foi possível concluir que o desafio proporcionou situações de maior dificuldade na etapa de codificação e de integração
+entre a IDE do arduino e o \textit{Prcessing}. Isso se deu por conta, primeiramente, da falta de contato com o \textit{software} e da busca gradativa pela familiaridade com a 
+integração de duas partes que precisavam funcionar de modo a quando uma terminava a outra começava. Segundamente, a dificuldade se moldou devido a necessidade de novas funções 
+nos códigos, aonde foi necessário uma pesquisa mais afundo que proporcionasse um entendimento suficiente para concluir a atividade proposta.
+\\
+Também foi muito enriquecedor a aprendizagem no \textit{Processing}, uma vez que o mesmo possibilta a prototipagem de uma interface gráfica para um aplicativo ou site, porém sem 
+grandes complexidades e com resultados satisfatórios. Ou seja, o \textit{software} oferece uma integração com IDE's para simulações, testes, ou até mesmo desenvolvimento de produto.
 % -----------------------------------------------------------------------------------------------------
 \end{document}
