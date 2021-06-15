@@ -8,7 +8,6 @@
 - Discentes: Frederico Barreto, Júlia Nascimento e Marcelo Santana
 - Disciplina: Sistemas Embarcados
 - Docente: Marco Antonio dos Reis
-- Discentes: Frederico Barreto, Júlia Nascimento e Marcelo Santana
 
 ### Licence
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/marcelo-sb/PONG-AV.III/blob/main/LICENSE)
