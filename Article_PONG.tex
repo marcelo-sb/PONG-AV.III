@@ -5,11 +5,6 @@
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-                % \ begin { figura } [h]
-                % \ caption {Descrição da imagem}
-                % \ centering
-                % \ includegraphics [largura = 7cm] {pasta com a imagem/nome da imagem}
-                % \ end { figura }
 \usepackage{multicol}
 \usepackage{siunitx}
 \usepackage{authblk}
@@ -37,9 +32,34 @@
 \end{abstract}
 % -----------------------------------------------------------------------------------------------------
 \section{Introdução}
-
+    Para a confecção e idealização do PONG, faz-se necessário primeiramente compreender alguns conceitos por 
+    trás das plataformas e equipamentos utilizados na construção do desafio.
+    \\
+    O \textit{Processing} é uma linguagem de programação de código aberto e ambiente dedesenvolvimento integrado 
+    (IDE), construído para as artes eletrônicas e comunidades de projetos visuais com o objetivo de 
+    ensinar noções básicas de programação de computador em um contexto visual e para servir como base para 
+    cadernos eletrônicos. É considerado um \textit{sketchbook}, uma alternativa de organização de 
+    projetos sem ser o um IDE padrão. Ao programar em Processing, todas classes adicionais definidas serão
+    tratados como classes internas quando o código é traduzido para Java puro antes de
+    compilar. Isso significa que o uso de variáveis e métodos estáticos em classes é proibido
+    a menos que você diga que deseja o processamento para o código no modo de Java puro.
+    \\
+    Já o \textit{Arduino} é uma plataforma de prototipagem eletrônica de hardware livre e de placa única,
+    projetada com um microcontrolador Atmel AVR com suporte de entrada/saída embutido, uma
+    linguagem de programação padrão que é essencialmente C/C++. 
+    Pode ser usado para o desenvolvimento de objetos interativos independentes, ou para ser
+    conectado a um computador hospedeiro. Uma placa Arduino é composta por um controlador,
+    algumas linhas de E/S digital e analógica, além de uma interface serial ou USB, para
+    interligar-se ao hospedeiro, que é usado para programá-la e interagi-la em tempo real.
 % -----------------------------------------------------------------------------------------------------
 \section{Desenvolvimento}
+
+\begin{figure}[h]
+    \caption{Placa do Arduino conectada}
+    \centering
+    \includegraphics*[width=7cm]{Imagens/Arduino.jpg}
+\end{figure}
+
 % -----------------------------------------------------------------------------------------------------   
 \section{Conclusão}
 % -----------------------------------------------------------------------------------------------------
