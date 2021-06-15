@@ -1,7 +1,10 @@
 int pos, read1, last, pos2, read2, last2, read3, read4;
 
 void setup() {
-  // put your setup code here, to run once:
+  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
+  pinMode(12, INPUT);
+  pinMode(13, INPUT);
   Serial.begin(9600);
 }
 
